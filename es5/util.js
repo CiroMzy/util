@@ -97,9 +97,12 @@ util.jsonp = function (args) {
     var opt = {
         url: '',
         data: {},
-        callBack: 'callback'
+        jsonpCallback: 'jsonp'
     }
     util.extend(opt, args)
+    var url = util.dataToUri(opt.url, opt.data) + encodeURIComponent('jsonpCallback') + '=' + encodeURIComponent(opt.jsonpCallback)
+    util.createScript({src:url})
+
 }
 
 /********************************
@@ -111,8 +114,8 @@ util.jsonp = function (args) {
  * encode: bollean格式，true 需要转译，false 不需要转译
  */
 util.dataToUri = function (url, data, encode) {
-    console.log(data.__proto__ === Object.prototype && data.prototype === undefined)
-    if (data.__proto__ === Object.prototype && data.prototype === undefined) {
+    // 是否为字面量对象
+    if (util.ifJson) {
         var _encode = true,
             dataArr = []
         if (typeof encode === 'boolean') {
@@ -143,10 +146,40 @@ util.extend = function (opt, args) {
     }
 }
 
+/*******************************
+ * 创建script标签
+ *
+ * opt为字面量对象，设置script的属性，
+ * 最终在head上创建一个script标签
+ */
+util.createScript = function (opt) {
+    var script = document.createElement('script')
+    // 是否为字面量对象
+    if (!util.ifJson(opt)) {
+        return
+    }
+    for (var item in opt) {
+        script.setAttribute(item, opt[item])
+    }
+    document.querySelector('head').appendChild(script)
+}
+
+/********************************
+ * 判断是字面量对象
+ *
+ * true 是字面量对象， false 不是
+ */
+util.ifJson = function (data) {
+    if (data instanceof Object  && data.prototype === undefined) {
+        return true
+    }
+    return false
+}
+
 
 /***************************************************
  * 1.判断是不是字面量对象
- * obj.__proto__ === Object.prototype && obj.prototype === undefined
+ * data instanceof Object  && data.prototype === undefined
  * 是否直接继承自Object 并且没有原型对象
  *
  *
