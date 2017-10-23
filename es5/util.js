@@ -1,8 +1,14 @@
+
 var util = {}
 
 /****************************
  *hasClass
+ *
  * 判断是否存在某个class
+ * obj：原生dom
+ * className：要验证的class
+ *
+ * 返回：boolean，true 包含，false 不包含
 */
 util.hasClass = function (obj, className) {
     var reg = new RegExp('^|\\s' + className + '$|\\s')
@@ -11,10 +17,15 @@ util.hasClass = function (obj, className) {
 
 /****************************
  *addClass
+ *
  * 添加一个class
+ * obj：原生dom
+ * className：要添加的class
+ *
+ * 返回：string，拼接在一起的className
 */
 util.addClass = function (obj, className) {
-    if (hasClass(obj, className)) {
+    if (util.hasClass(obj, className)) {
         return
     }
     var classArr,
@@ -24,8 +35,15 @@ util.addClass = function (obj, className) {
     classNew = classArr.join(' ')
     obj.className = className
 }
+
 /***************************
  * ajax
+ *
+ * url：请求路径
+ * type：请求方式
+ * data：参数
+ * success：成功回调
+ * error：错误回调
  */
 util.ajax = function (args) {
     var opt = {
@@ -42,22 +60,17 @@ util.ajax = function (args) {
             data = opt.data,
             success = opt.success,
             error = opt.error,
-            dataArr = [],
             res
         var xhr = XMLHttpRequest ? new XMLHttpRequest() : window.ActiveXObject('Miscrosoft.XMLHTTP')
-        for (var item in data) {
-            dataArr.push(item + '=' + data[item])
-        }
-
+        var combinedUrl = util.dataToUri(url, data)
         if (type === 'GET') {
-            url += (url.indexOf('?') ? '?' : '&') + dataArr.join('&')
-            xhr.open(type, url.replace(/\?$/g, ''), true)
+            xhr.open(type, combinedUrl, true)
             xhr.send()
         }
         if (type === 'post') {
             xhr.open(type, url, true)
             xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencode')
-            xhr.send(dataArr.join('&'))
+            xhr.send(combinedUrl)
         }
         xhr.onload = function () {
             if (xhr.status === 200 || xhr.status === 304) {
@@ -76,11 +89,47 @@ util.ajax = function (args) {
 
 /********************************
  * jsonp
+ *
+ * url：请求路径
+ * data：参数
  */
-util.jsonp = function () {
-
+util.jsonp = function (args) {
+    var opt = {
+        url: '',
+        data: {},
+        callBack: 'callback'
+    }
+    util.extend(opt, args)
 }
 
+/********************************
+ * dataToUri
+ *
+ * 将json格式的data和url合并在一起，并encode
+ * url: 标准url
+ * data: 必须是字面量对象格式
+ * encode: bollean格式，true 需要转译，false 不需要转译
+ */
+util.dataToUri = function (url, data, encode) {
+    console.log(data.__proto__ === Object.prototype && data.prototype === undefined)
+    if (data.__proto__ === Object.prototype && data.prototype === undefined) {
+        var _encode = true,
+            dataArr = []
+        if (typeof encode === 'boolean') {
+            _encode = encode
+        }
+        for (var item in data) {
+            var str = _encode ? (encodeURIComponent(item) + '=' + encodeURIComponent(data[item])) : item + '=' + data[item]
+            dataArr.push(str)
+        }
+        url += (url.indexOf('?') < 0 ? '?' : '&') + dataArr.join('&')
+
+        return url.replace(/$\\?/g, '')
+    } else {
+        return url
+    }
+
+}
 
 /********************************
  * 参数的覆盖
@@ -95,8 +144,24 @@ util.extend = function (opt, args) {
 }
 
 
-
-
+/***************************************************
+ * 1.判断是不是字面量对象
+ * obj.__proto__ === Object.prototype && obj.prototype === undefined
+ * 是否直接继承自Object 并且没有原型对象
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
 
 
 
