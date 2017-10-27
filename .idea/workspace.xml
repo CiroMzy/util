@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c07e25fe-aca5-4a53-91ff-9669cd87be65" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/util.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/es5/util.js" afterPath="$PROJECT_DIR$/es5/util.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,11 +29,75 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="util.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="util.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/es5/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3363">
-              <caret line="177" column="0" lean-forward="true" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+            <state relative-caret-position="749">
+              <caret line="177" column="0" lean-forward="false" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+              <folding>
+                <marker date="1508828786929" expanded="true" signature="16:151" ph="/** hasClass ...*/" />
+                <marker date="1508828786929" expanded="true" signature="194:288" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="290:418" ph="/** addClass ...*/" />
+                <marker date="1508828786929" expanded="true" signature="461:695" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="502:524" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="697:806" ph="/** ajax ...*/" />
+                <marker date="1508828786929" expanded="true" signature="835:2102" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="851:977" ph="{&quot;url&quot;: ''...}" />
+                <marker date="1508828786929" expanded="true" signature="1053:2100" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="1417:1497" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="1527:1695" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="1729:2094" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="1789:1955" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="1879:1941" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="1961:2084" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="2010:2070" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="2104:2176" ph="/** jsonp ...*/" />
+                <marker date="1508828786929" expanded="true" signature="2206:2490" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="2222:2295" ph="{&quot;url&quot;: ''...}" />
+                <marker date="1508828786929" expanded="true" signature="2492:2655" ph="/** dataToUri ...*/" />
+                <marker date="1508828786929" expanded="true" signature="2702:3226" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="2741:3191" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="2837:2877" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="2909:3074" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="3197:3223" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="3228:3292" ph="/** 参数的覆盖 ...*/" />
+                <marker date="1508828786929" expanded="true" signature="3328:3452" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="3356:3450" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="3398:3444" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="3454:3557" ph="/** 创建script标签 ...*/" />
+                <marker date="1508828786929" expanded="true" signature="3593:3846" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="3688:3710" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="3737:3789" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="3848:3925" ph="/** 判断是字面量对象 ...*/" />
+                <marker date="1508828786929" expanded="true" signature="3956:4069" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="4023:4050" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="4071:4207" ph="/** COOKIE 操作类 ...*/" />
+                <marker date="1508828786929" expanded="true" signature="4209:4258" ph="/** 添加一个cookie ...*/" />
+                <marker date="1508828786929" expanded="true" signature="4298:4486" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="4488:4540" ph="/** 获取某个cookie的值 ...*/" />
+                <marker date="1508828786929" expanded="true" signature="4573:4965" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="4703:4936" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="4860:4930" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="4967:5024" ph="/** 判断某个cookie是否存在 ...*/" />
+                <marker date="1508828786929" expanded="true" signature="5061:5214" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="5168:5195" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="5216:5318" ph="/** 移除某个cookie ...*/" />
+                <marker date="1508828786929" expanded="true" signature="5365:5873" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="5507:5871" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="5556:5865" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="5586:5748" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="5625:5734" ph="{...}" />
+                <marker date="1508828786929" expanded="true" signature="5754:5855" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="util.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/es6/util.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4883">
+              <caret line="257" column="9" lean-forward="false" selection-start-line="257" selection-start-column="9" selection-end-line="257" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -43,8 +108,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -63,11 +128,18 @@
       <list>
         <option value="$PROJECT_DIR$/es5/index.html" />
         <option value="$PROJECT_DIR$/es5/util.js" />
+        <option value="$PROJECT_DIR$/es6/util.js" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -106,8 +178,18 @@
               <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="es5" />
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="es6" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -120,6 +202,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -212,41 +298,33 @@
       <option name="presentableId" value="Default" />
       <updated>1508720013365</updated>
       <workItem from="1508720014551" duration="19473000" />
+      <workItem from="1509097765572" duration="120000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19501000" />
+    <option name="totallyTimeSpent" value="19784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07481559" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07007376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0749736" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +340,76 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/es5/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/es5/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3363">
+          <caret line="177" column="0" lean-forward="true" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+          <folding>
+            <marker date="1508828786929" expanded="true" signature="16:151" ph="/** hasClass ...*/" />
+            <marker date="1508828786929" expanded="true" signature="194:288" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="290:418" ph="/** addClass ...*/" />
+            <marker date="1508828786929" expanded="true" signature="461:695" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="502:524" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="697:806" ph="/** ajax ...*/" />
+            <marker date="1508828786929" expanded="true" signature="835:2102" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="851:977" ph="{&quot;url&quot;: ''...}" />
+            <marker date="1508828786929" expanded="true" signature="1053:2100" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1417:1497" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1527:1695" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1729:2094" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1789:1955" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1879:1941" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1961:2084" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2010:2070" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2104:2176" ph="/** jsonp ...*/" />
+            <marker date="1508828786929" expanded="true" signature="2206:2490" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2222:2295" ph="{&quot;url&quot;: ''...}" />
+            <marker date="1508828786929" expanded="true" signature="2492:2655" ph="/** dataToUri ...*/" />
+            <marker date="1508828786929" expanded="true" signature="2702:3226" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2741:3191" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2837:2877" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2909:3074" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3197:3223" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3228:3292" ph="/** 参数的覆盖 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="3328:3452" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3356:3450" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3398:3444" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3454:3557" ph="/** 创建script标签 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="3593:3846" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3688:3710" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3737:3789" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3848:3925" ph="/** 判断是字面量对象 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="3956:4069" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4023:4050" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4071:4207" ph="/** COOKIE 操作类 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="4209:4258" ph="/** 添加一个cookie ...*/" />
+            <marker date="1508828786929" expanded="true" signature="4298:4486" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4488:4540" ph="/** 获取某个cookie的值 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="4573:4965" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4703:4936" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4860:4930" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4967:5024" ph="/** 判断某个cookie是否存在 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="5061:5214" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5168:5195" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5216:5318" ph="/** 移除某个cookie ...*/" />
+            <marker date="1508828786929" expanded="true" signature="5365:5873" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5507:5871" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5556:5865" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5586:5748" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5625:5734" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5754:5855" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/es5/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -272,7 +420,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1178">
           <caret line="64" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="64" selection-end-column="1" />
-          <folding />
+          <folding>
+            <marker date="1508828786929" expanded="true" signature="16:151" ph="/** hasClass ...*/" />
+            <marker date="1508828786929" expanded="true" signature="194:288" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="290:418" ph="/** addClass ...*/" />
+            <marker date="1508828786929" expanded="true" signature="461:695" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="502:524" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="697:806" ph="/** ajax ...*/" />
+            <marker date="1508828786929" expanded="true" signature="835:2102" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="851:977" ph="{&quot;url&quot;: ''...}" />
+            <marker date="1508828786929" expanded="true" signature="1053:2100" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1417:1497" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1527:1695" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1729:2094" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1789:1955" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1879:1941" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1961:2084" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2010:2070" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2104:2176" ph="/** jsonp ...*/" />
+            <marker date="1508828786929" expanded="true" signature="2206:2490" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2222:2295" ph="{&quot;url&quot;: ''...}" />
+            <marker date="1508828786929" expanded="true" signature="2492:2655" ph="/** dataToUri ...*/" />
+            <marker date="1508828786929" expanded="true" signature="2702:3226" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2741:3191" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2837:2877" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2909:3074" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3197:3223" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3228:3292" ph="/** 参数的覆盖 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="3328:3452" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3356:3450" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3398:3444" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3454:3557" ph="/** 创建script标签 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="3593:3846" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3688:3710" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3737:3789" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3848:3925" ph="/** 判断是字面量对象 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="3956:4069" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4023:4050" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4071:4207" ph="/** COOKIE 操作类 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="4209:4258" ph="/** 添加一个cookie ...*/" />
+            <marker date="1508828786929" expanded="true" signature="4298:4486" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4488:4540" ph="/** 获取某个cookie的值 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="4573:4965" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4703:4936" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4860:4930" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4967:5024" ph="/** 判断某个cookie是否存在 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="5061:5214" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5168:5195" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5216:5318" ph="/** 移除某个cookie ...*/" />
+            <marker date="1508828786929" expanded="true" signature="5365:5873" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5507:5871" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5556:5865" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5586:5748" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5625:5734" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5754:5855" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -288,7 +490,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-          <folding />
+          <folding>
+            <marker date="1508828786929" expanded="true" signature="16:151" ph="/** hasClass ...*/" />
+            <marker date="1508828786929" expanded="true" signature="194:288" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="290:418" ph="/** addClass ...*/" />
+            <marker date="1508828786929" expanded="true" signature="461:695" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="502:524" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="697:806" ph="/** ajax ...*/" />
+            <marker date="1508828786929" expanded="true" signature="835:2102" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="851:977" ph="{&quot;url&quot;: ''...}" />
+            <marker date="1508828786929" expanded="true" signature="1053:2100" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1417:1497" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1527:1695" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1729:2094" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1789:1955" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1879:1941" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1961:2084" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2010:2070" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2104:2176" ph="/** jsonp ...*/" />
+            <marker date="1508828786929" expanded="true" signature="2206:2490" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2222:2295" ph="{&quot;url&quot;: ''...}" />
+            <marker date="1508828786929" expanded="true" signature="2492:2655" ph="/** dataToUri ...*/" />
+            <marker date="1508828786929" expanded="true" signature="2702:3226" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2741:3191" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2837:2877" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2909:3074" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3197:3223" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3228:3292" ph="/** 参数的覆盖 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="3328:3452" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3356:3450" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3398:3444" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3454:3557" ph="/** 创建script标签 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="3593:3846" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3688:3710" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3737:3789" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3848:3925" ph="/** 判断是字面量对象 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="3956:4069" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4023:4050" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4071:4207" ph="/** COOKIE 操作类 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="4209:4258" ph="/** 添加一个cookie ...*/" />
+            <marker date="1508828786929" expanded="true" signature="4298:4486" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4488:4540" ph="/** 获取某个cookie的值 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="4573:4965" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4703:4936" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4860:4930" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4967:5024" ph="/** 判断某个cookie是否存在 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="5061:5214" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5168:5195" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5216:5318" ph="/** 移除某个cookie ...*/" />
+            <marker date="1508828786929" expanded="true" signature="5365:5873" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5507:5871" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5556:5865" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5586:5748" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5625:5734" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5754:5855" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -296,7 +552,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1508828786929" expanded="true" signature="16:151" ph="/** hasClass ...*/" />
+            <marker date="1508828786929" expanded="true" signature="194:288" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="290:418" ph="/** addClass ...*/" />
+            <marker date="1508828786929" expanded="true" signature="461:695" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="502:524" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="697:806" ph="/** ajax ...*/" />
+            <marker date="1508828786929" expanded="true" signature="835:2102" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="851:977" ph="{&quot;url&quot;: ''...}" />
+            <marker date="1508828786929" expanded="true" signature="1053:2100" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1417:1497" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1527:1695" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1729:2094" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1789:1955" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1879:1941" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1961:2084" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2010:2070" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2104:2176" ph="/** jsonp ...*/" />
+            <marker date="1508828786929" expanded="true" signature="2206:2490" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2222:2295" ph="{&quot;url&quot;: ''...}" />
+            <marker date="1508828786929" expanded="true" signature="2492:2655" ph="/** dataToUri ...*/" />
+            <marker date="1508828786929" expanded="true" signature="2702:3226" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2741:3191" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2837:2877" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2909:3074" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3197:3223" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3228:3292" ph="/** 参数的覆盖 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="3328:3452" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3356:3450" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3398:3444" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3454:3557" ph="/** 创建script标签 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="3593:3846" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3688:3710" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3737:3789" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3848:3925" ph="/** 判断是字面量对象 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="3956:4069" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4023:4050" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4071:4207" ph="/** COOKIE 操作类 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="4209:4258" ph="/** 添加一个cookie ...*/" />
+            <marker date="1508828786929" expanded="true" signature="4298:4486" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4488:4540" ph="/** 获取某个cookie的值 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="4573:4965" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4703:4936" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4860:4930" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4967:5024" ph="/** 判断某个cookie是否存在 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="5061:5214" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5168:5195" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5216:5318" ph="/** 移除某个cookie ...*/" />
+            <marker date="1508828786929" expanded="true" signature="5365:5873" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5507:5871" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5556:5865" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5586:5748" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5625:5734" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5754:5855" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -310,9 +620,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/es5/util.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3363">
-          <caret line="177" column="0" lean-forward="true" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="749">
+          <caret line="177" column="0" lean-forward="false" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+          <folding>
+            <marker date="1508828786929" expanded="true" signature="16:151" ph="/** hasClass ...*/" />
+            <marker date="1508828786929" expanded="true" signature="194:288" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="290:418" ph="/** addClass ...*/" />
+            <marker date="1508828786929" expanded="true" signature="461:695" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="502:524" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="697:806" ph="/** ajax ...*/" />
+            <marker date="1508828786929" expanded="true" signature="835:2102" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="851:977" ph="{&quot;url&quot;: ''...}" />
+            <marker date="1508828786929" expanded="true" signature="1053:2100" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1417:1497" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1527:1695" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1729:2094" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1789:1955" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1879:1941" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="1961:2084" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2010:2070" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2104:2176" ph="/** jsonp ...*/" />
+            <marker date="1508828786929" expanded="true" signature="2206:2490" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2222:2295" ph="{&quot;url&quot;: ''...}" />
+            <marker date="1508828786929" expanded="true" signature="2492:2655" ph="/** dataToUri ...*/" />
+            <marker date="1508828786929" expanded="true" signature="2702:3226" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2741:3191" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2837:2877" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="2909:3074" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3197:3223" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3228:3292" ph="/** 参数的覆盖 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="3328:3452" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3356:3450" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3398:3444" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3454:3557" ph="/** 创建script标签 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="3593:3846" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3688:3710" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3737:3789" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="3848:3925" ph="/** 判断是字面量对象 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="3956:4069" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4023:4050" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4071:4207" ph="/** COOKIE 操作类 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="4209:4258" ph="/** 添加一个cookie ...*/" />
+            <marker date="1508828786929" expanded="true" signature="4298:4486" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4488:4540" ph="/** 获取某个cookie的值 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="4573:4965" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4703:4936" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4860:4930" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="4967:5024" ph="/** 判断某个cookie是否存在 ...*/" />
+            <marker date="1508828786929" expanded="true" signature="5061:5214" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5168:5195" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5216:5318" ph="/** 移除某个cookie ...*/" />
+            <marker date="1508828786929" expanded="true" signature="5365:5873" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5507:5871" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5556:5865" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5586:5748" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5625:5734" ph="{...}" />
+            <marker date="1508828786929" expanded="true" signature="5754:5855" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -320,6 +684,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/es6/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4883">
+          <caret line="257" column="9" lean-forward="false" selection-start-line="257" selection-start-column="9" selection-end-line="257" selection-end-column="9" />
           <folding />
         </state>
       </provider>
