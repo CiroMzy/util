@@ -241,3 +241,36 @@ util.removeCookie = function (key, removeAll) {
         }
     }
 }
+
+/************************************
+ *浅拷贝
+ */
+util.shallowCopy = function (json) {
+    var dst = {}
+    for (item in json) {
+        if (json.hasOwnProperty(item)) {
+            dst[item] = json[item]
+        }
+    }
+    return dst
+}
+
+/**********************
+ * 获取url中的参数
+ */
+util.getUrlParams = function (opt) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
+
+/**********************************
+ *验证手机号
+ */
+util.isPhone = function (opt) {
+    var pattern = /^1(3|4|5|7|8)\d{9}$/
+    if (pattern.test(opt)) {
+        return true
+    }
+    return false
+}

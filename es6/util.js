@@ -1,3 +1,4 @@
+
 /****************************
  *hasClass
  *
@@ -111,7 +112,7 @@ export const jsonp = function (args) {
  */
 export const dataToUri = function (url, data, encode) {
     // 是否为字面量对象
-    if (ifJson(data)) {
+    if (isJson(data)) {
         let _encode = true
         let dataArr = []
         if (typeof encode === 'boolean') {
@@ -150,7 +151,7 @@ export const extend = function (opt, args) {
 export const createScript = function (opt) {
     let script = document.createElement('script')
     // 是否为字面量对象
-    if (!ifJson(opt)) {
+    if (!isJson(opt)) {
         return
     }
     for (let item in opt) {
@@ -164,7 +165,7 @@ export const createScript = function (opt) {
  *
  * true 是字面量对象， false 不是
  */
-export const ifJson = function (data) {
+export const isJson = function (data) {
     if (data instanceof Object && data.prototype === undefined) {
         return true
     }
@@ -237,6 +238,84 @@ export const removeCookie = function (key, removeAll) {
         }
     }
 }
+/*******************************************************************************
+ * 本地存储
+ */
+
+/********************************
+ * localStorage
+ */
+/************
+ * 是否存在localStorage
+ * att 需要判断的属性
+ * time 过期时间，默认一天
+ * true 存在， false 不存在
+ */
+export const containLocalStorage = function (attr, time) {
+    let timeOut = time || 86400000
+    let now = Date.parse(new Date())
+    let storage = window.localStorage
+    if (storage.hasOwnProperty(attr)) {
+        let json = JSON.parse(storage[attr])
+        if (json['timeStamp'] + timeOut > now) {
+            return true
+        }
+        return false
+    } else {
+        return false
+    }
+}
+/**************
+ * 添加localStorage
+ * json 传入字面量对象格式如{name:'夏天'}
+ * 存储方式为两级，为了添加时间戳设置过期时间
+ * name: {name: '夏天', timeStamp: '132456789'}
+ */
+export const setLocalStorage = function (json) {
+    if (!isJson(json) || !window.localStorage) {
+        return
+    }
+    let storage = window.localStorage
+    for (let item in json) {
+        if (json.hasOwnProperty(item)) {
+            let myStorage = {}
+            myStorage[item] = json[item]
+            myStorage['timeStamp'] = Date.parse(new Date())
+            storage[item] = JSON.stringify(myStorage)
+        }
+    }
+}
+/**************
+ * 获取localStorage
+ * 存在，返回对应值
+ * 不存在，返回''
+ */
+export const getLocalStorage = function (attr) {
+    let storage = window.localStorage
+    if (containLocalStorage(attr)) {
+        let json = JSON.parse(storage[attr])
+        return json[attr]
+    } else {
+        return ''
+    }
+}
+/*************
+ * 删除localStorage
+ *
+ */
+export const delLocalStorage = function (attr) {
+    let storage = window.localStorage
+    if (containLocalStorage(attr)) {
+        storage.removeItem(attr)
+    }
+}
+/**************
+ * 删除全部localStorage
+ */
+export const delAllLocalStorage = function (attr) {
+    let storage = window.localStorage
+    storage.clear()
+}
 
 /**********************************************************************
  * 格式校验类
@@ -257,12 +336,23 @@ export const isEmpty = function (value) {
 /************************************
  * 验证密码格式
  *
- *true 格式不正确 ， false 格式正确
+ *true 格式正确 ， false 格式不正确
  */
 export const isPassword = function (value) {
-    console.log(value)
-    var pattern = /^[\d_a-zA-Z]{6,18}$/
-    if (!pattern.test(value)) {
+    let pattern = /^[\d_a-zA-Z]{6,18}$/
+    if (pattern.test(value)) {
+        return true
+    }
+    return false
+}
+
+/**************************************
+ * 手机号格式
+ * true 格式正确， false 格式不正确
+ */
+export const isPhone = function (value) {
+    let pattern = /^1(3|4|5|7|8)\d{9}$/
+    if (pattern.test(value)) {
         return true
     }
     return false
@@ -278,9 +368,10 @@ export const goTo = function (str) {
 }
 export const getLocalHref = function () {
     let str = window.location.href
-    if (str.indexOf('#') > -1) {
-        str.substring(0, str.indexOf('#'))
+    if (str.indexOf('#/') > -1) {
+        str = str.substring(0, str.indexOf('#/'))
     }
+    console.log(str)
     return str
 }
 
