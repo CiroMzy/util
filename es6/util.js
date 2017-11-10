@@ -1,4 +1,8 @@
 
+/**************************************************************************************************************************
+ *                                  dom操作 相关
+ ***************************************************************************************************************************/
+
 /****************************
  *hasClass
  *
@@ -33,6 +37,36 @@ export const addClass = function (obj, className) {
     classNew = classArr.join(' ')
     obj.className = classNew
 }
+
+/*******************************
+ * 创建script标签
+ *
+ * opt为字面量对象，设置script的属性，
+ * 最终在head上创建一个script标签
+ */
+export const createScript = function (opt) {
+    let script = document.createElement('script')
+    // 是否为字面量对象
+    if (!isJson(opt)) {
+        return
+    }
+    for (let item in opt) {
+        script.setAttribute(item, opt[item])
+    }
+    document.querySelector('head').appendChild(script)
+}
+
+/*******************************
+ * 获取元素属性值
+ */
+export const getComputedAtt = function (dom, att) {
+    let value = (dom.currentStyle ? dom.currentStyle : getComputedStyle(dom))[att]
+    return value
+}
+
+/**************************************************************************************************************************
+ *                                  前后端交互 相关
+ ***************************************************************************************************************************/
 
 /***************************
  * ajax
@@ -102,79 +136,14 @@ export const jsonp = function (args) {
     createScript({src: url})
 }
 
-/********************************
- * dataToUri
- *
- * 将json格式的data和url合并在一起，并encode
- * url: 标准url
- * data: 必须是字面量对象格式
- * encode: bollean格式，true 需要转译，false 不需要转译
- */
-export const dataToUri = function (url, data, encode) {
-    // 是否为字面量对象
-    if (isJson(data)) {
-        let _encode = true
-        let dataArr = []
-        if (typeof encode === 'boolean') {
-            _encode = encode
-        }
-        for (let item in data) {
-            let str = _encode ? (encodeURIComponent(item) + '=' + encodeURIComponent(data[item])) : item + '=' + data[item]
-            dataArr.push(str)
-        }
-        url += (url.indexOf('?') < 0 ? '?' : '&') + dataArr.join('&')
 
-        return url.replace(/$\\?/g, '')
-    } else {
-        return url
-    }
-}
-
-/********************************
- * 参数的覆盖
- * 以第一个为基准，并不新添属性
- */
-export const extend = function (opt, args) {
-    for (let item in opt) {
-        if (args[item] !== undefined) {
-            opt[item] = args[item]
-        }
-    }
-}
+/**************************************************************************************************************************
+ *                                  数据存储 相关
+ ***************************************************************************************************************************/
 
 /*******************************
- * 创建script标签
- *
- * opt为字面量对象，设置script的属性，
- * 最终在head上创建一个script标签
- */
-export const createScript = function (opt) {
-    let script = document.createElement('script')
-    // 是否为字面量对象
-    if (!isJson(opt)) {
-        return
-    }
-    for (let item in opt) {
-        script.setAttribute(item, opt[item])
-    }
-    document.querySelector('head').appendChild(script)
-}
-
-/********************************
- * 判断是字面量对象
- *
- * true 是字面量对象， false 不是
- */
-export const isJson = function (data) {
-    if (data instanceof Object && data.prototype === undefined) {
-        return true
-    }
-    return false
-}
-
-/*********************************************************************************************************************
  * COOKIE 操作类
- */
+ ******************************/
 
 /******************************
  * 添加一个cookie
@@ -238,14 +207,13 @@ export const removeCookie = function (key, removeAll) {
         }
     }
 }
-/*******************************************************************************
- * 本地存储
- */
+
 
 /********************************
  * localStorage
- */
-/************
+ ******************************/
+
+/********************************
  * 是否存在localStorage
  * att 需要判断的属性
  * time 过期时间，默认一天
@@ -265,7 +233,8 @@ export const containLocalStorage = function (attr, time) {
         return false
     }
 }
-/**************
+
+/********************************
  * 添加localStorage
  * json 传入字面量对象格式如{name:'夏天'}
  * 存储方式为两级，为了添加时间戳设置过期时间
@@ -285,7 +254,8 @@ export const setLocalStorage = function (json) {
         }
     }
 }
-/**************
+
+/******************************
  * 获取localStorage
  * 存在，返回对应值
  * 不存在，返回''
@@ -299,7 +269,8 @@ export const getLocalStorage = function (attr) {
         return ''
     }
 }
-/*************
+
+/******************************
  * 删除localStorage
  *
  */
@@ -309,7 +280,8 @@ export const delLocalStorage = function (attr) {
         storage.removeItem(attr)
     }
 }
-/**************
+
+/**************************
  * 删除全部localStorage
  */
 export const delAllLocalStorage = function (attr) {
@@ -317,9 +289,76 @@ export const delAllLocalStorage = function (attr) {
     storage.clear()
 }
 
-/**********************************************************************
- * 格式校验类
+
+
+/**************************************************************************************************************************
+ *                                  uri操作 相关
+ ***************************************************************************************************************************/
+
+/********************************
+ * dataToUri
+ *
+ * 将json格式的data和url合并在一起，并encode
+ * url: 标准url
+ * data: 必须是字面量对象格式
+ * encode: bollean格式，true 需要转译，false 不需要转译
  */
+export const dataToUri = function (url, data, encode) {
+    // 是否为字面量对象
+    if (isJson(data)) {
+        let _encode = true
+        let dataArr = []
+        if (typeof encode === 'boolean') {
+            _encode = encode
+        }
+        for (let item in data) {
+            let str = _encode ? (encodeURIComponent(item) + '=' + encodeURIComponent(data[item])) : item + '=' + data[item]
+            dataArr.push(str)
+        }
+        url += (url.indexOf('?') < 0 ? '?' : '&') + dataArr.join('&')
+
+        return url.replace(/$\\?/g, '')
+    } else {
+        return url
+    }
+}
+
+/********************************
+ * 跳转到页面
+ */
+export const goTo = function (str) {
+    if (str && typeof str === 'string') {
+        window.location.href = str
+    }
+}
+
+/********************************
+ * 获取当前url，在#/之前
+ */
+export const getLocalHref = function () {
+    let str = window.location.href
+    if (str.indexOf('#/') > -1) {
+        str = str.substring(0, str.indexOf('#/'))
+    }
+    console.log(str)
+    return str
+}
+
+/**************************************************************************************************************************
+ *                                  格式校验 相关
+ ***************************************************************************************************************************/
+
+/********************************
+ * 判断是字面量对象
+ *
+ * true 是字面量对象， false 不是
+ */
+export const isJson = function (data) {
+    if (data instanceof Object && data.prototype === undefined) {
+        return true
+    }
+    return false
+}
 
 /*********************************
  *不能为空
@@ -358,27 +397,20 @@ export const isPhone = function (value) {
     return false
 }
 
-/*********************************************************************
- * 小工具类
+/**************************************************************************************************************************
+ *                                  工具 相关
+ ***************************************************************************************************************************/
+
+
+/********************************
+ * 参数的覆盖
+ * 以第一个为基准，并不新添属性
  */
-export const goTo = function (str) {
-    if (str && typeof str === 'string') {
-        window.location.href = str
+export const extend = function (opt, args) {
+    for (let item in opt) {
+        if (args[item] !== undefined) {
+            opt[item] = args[item]
+        }
     }
-}
-export const getLocalHref = function () {
-    let str = window.location.href
-    if (str.indexOf('#/') > -1) {
-        str = str.substring(0, str.indexOf('#/'))
-    }
-    console.log(str)
-    return str
 }
 
-/**************************************************************************************************************************
- * dom 操作类
- */
-export const getComputedAtt = function (dom, att) {
-    let value = (dom.currentStyle ? dom.currentStyle : getComputedStyle(dom))[att]
-    return value
-}
