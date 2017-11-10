@@ -1,5 +1,8 @@
 
 var util = {}
+/**************************************************************************************************************************
+ *                                  dom操作 相关
+ ***************************************************************************************************************************/
 
 /****************************
  *hasClass
@@ -35,6 +38,28 @@ util.addClass = function (obj, className) {
     classNew = classArr.join(' ')
     obj.className = className
 }
+
+/*******************************
+ * 创建script标签
+ *
+ * opt为字面量对象，设置script的属性，
+ * 最终在head上创建一个script标签
+ */
+util.createScript = function (opt) {
+    var script = document.createElement('script')
+    // 是否为字面量对象
+    if (!util.ifJson(opt)) {
+        return
+    }
+    for (var item in opt) {
+        script.setAttribute(item, opt[item])
+    }
+    document.querySelector('head').appendChild(script)
+}
+
+/**************************************************************************************************************************
+ *                                  前后端交互 相关
+ ***************************************************************************************************************************/
 
 /***************************
  * ajax
@@ -105,81 +130,14 @@ util.jsonp = function (args) {
 
 }
 
-/********************************
- * dataToUri
- *
- * 将json格式的data和url合并在一起，并encode
- * url: 标准url
- * data: 必须是字面量对象格式
- * encode: bollean格式，true 需要转译，false 不需要转译
- */
-util.dataToUri = function (url, data, encode) {
-    // 是否为字面量对象
-    if (util.ifJson) {
-        var _encode = true,
-            dataArr = []
-        if (typeof encode === 'boolean') {
-            _encode = encode
-        }
-        for (var item in data) {
-            var str = _encode ? (encodeURIComponent(item) + '=' + encodeURIComponent(data[item])) : item + '=' + data[item]
-            dataArr.push(str)
-        }
-        url += (url.indexOf('?') < 0 ? '?' : '&') + dataArr.join('&')
 
-        return url.replace(/$\\?/g, '')
-    } else {
-        return url
-    }
+/**************************************************************************************************************************
+ *                                  数据存储 相关
+ ***************************************************************************************************************************/
 
-}
-
-/********************************
- * 参数的覆盖
- * 以第一个为基准，并不新添属性
- */
-util.extend = function (opt, args) {
-    for (var item in opt) {
-        if ( args[item] !== undefined ) {
-            opt[item] = args[item]
-        }
-    }
-}
-
-/*******************************
- * 创建script标签
- *
- * opt为字面量对象，设置script的属性，
- * 最终在head上创建一个script标签
- */
-util.createScript = function (opt) {
-    var script = document.createElement('script')
-    // 是否为字面量对象
-    if (!util.ifJson(opt)) {
-        return
-    }
-    for (var item in opt) {
-        script.setAttribute(item, opt[item])
-    }
-    document.querySelector('head').appendChild(script)
-}
-
-/********************************
- * 判断是字面量对象
- *
- * true 是字面量对象， false 不是
- */
-util.ifJson = function (data) {
-    if (data instanceof Object  && data.prototype === undefined) {
-        return true
-    }
-    return false
-}
-
-/*********************************************************************************************************************
+/******************************
  * COOKIE 操作类
- */
-
+ ******************************/
 /******************************
  * 添加一个cookie
  */
@@ -242,6 +200,94 @@ util.removeCookie = function (key, removeAll) {
     }
 }
 
+
+
+
+/**************************************************************************************************************************
+ *                                  uri操作 相关
+ ***************************************************************************************************************************/
+/**********************
+ * 获取url中的参数
+ */
+util.getUrlParams = function (opt) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
+
+/********************************
+ * dataToUri
+ *
+ * 将json格式的data和url合并在一起，并encode
+ * url: 标准url
+ * data: 必须是字面量对象格式
+ * encode: bollean格式，true 需要转译，false 不需要转译
+ */
+util.dataToUri = function (url, data, encode) {
+    // 是否为字面量对象
+    if (util.ifJson) {
+        var _encode = true,
+            dataArr = []
+        if (typeof encode === 'boolean') {
+            _encode = encode
+        }
+        for (var item in data) {
+            var str = _encode ? (encodeURIComponent(item) + '=' + encodeURIComponent(data[item])) : item + '=' + data[item]
+            dataArr.push(str)
+        }
+        url += (url.indexOf('?') < 0 ? '?' : '&') + dataArr.join('&')
+
+        return url.replace(/$\\?/g, '')
+    } else {
+        return url
+    }
+
+}
+
+
+/**************************************************************************************************************************
+ *                                  格式校验 相关
+ ***************************************************************************************************************************/
+/**********************************
+ *验证手机号
+ */
+util.isPhone = function (opt) {
+    var pattern = /^1(3|4|5|7|8)\d{9}$/
+    if (pattern.test(opt)) {
+        return true
+    }
+    return false
+}
+
+/********************************
+ * 判断是字面量对象
+ *
+ * true 是字面量对象， false 不是
+ */
+util.ifJson = function (data) {
+    if (data instanceof Object  && data.prototype === undefined) {
+        return true
+    }
+    return false
+}
+
+
+/**************************************************************************************************************************
+ *                                  工具 相关
+ ***************************************************************************************************************************/
+
+/********************************
+ * 参数的覆盖
+ * 以第一个为基准，并不新添属性
+ */
+util.extend = function (opt, args) {
+    for (var item in opt) {
+        if ( args[item] !== undefined ) {
+            opt[item] = args[item]
+        }
+    }
+}
+
 /************************************
  *浅拷贝
  */
@@ -253,24 +299,4 @@ util.shallowCopy = function (json) {
         }
     }
     return dst
-}
-
-/**********************
- * 获取url中的参数
- */
-util.getUrlParams = function (opt) {
-    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-    var r = window.location.search.substr(1).match(reg);
-    if (r != null) return unescape(r[2]); return null;
-}
-
-/**********************************
- *验证手机号
- */
-util.isPhone = function (opt) {
-    var pattern = /^1(3|4|5|7|8)\d{9}$/
-    if (pattern.test(opt)) {
-        return true
-    }
-    return false
 }
