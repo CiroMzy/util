@@ -13,7 +13,7 @@
  * 返回：boolean，true 包含，false 不包含
  */
 export const hasClass = function (obj, className) {
-    var reg = new RegExp('^|\\s' + className + '$|\\s')
+    let reg = new RegExp('^|\\s' + className + '$|\\s')
     return reg.test(obj.className)
 }
 
@@ -211,34 +211,22 @@ export const removeCookie = function (key, removeAll) {
 
 /********************************
  * localStorage
- ******************************/
-
-/********************************
+ */
+/************
  * 是否存在localStorage
  * att 需要判断的属性
- * time 过期时间，默认一天
- * true 存在， false 不存在
  */
-export const containLocalStorage = function (attr, time) {
-    let timeOut = time || 86400000
-    let now = Date.parse(new Date())
+export const containLocalStorage = function (attr) {
     let storage = window.localStorage
     if (storage.hasOwnProperty(attr)) {
-        let json = JSON.parse(storage[attr])
-        if (json['timeStamp'] + timeOut > now) {
-            return true
-        }
-        return false
+        return true
     } else {
         return false
     }
 }
-
-/********************************
+/**************
  * 添加localStorage
  * json 传入字面量对象格式如{name:'夏天'}
- * 存储方式为两级，为了添加时间戳设置过期时间
- * name: {name: '夏天', timeStamp: '132456789'}
  */
 export const setLocalStorage = function (json) {
     if (!isJson(json) || !window.localStorage) {
@@ -247,15 +235,12 @@ export const setLocalStorage = function (json) {
     let storage = window.localStorage
     for (let item in json) {
         if (json.hasOwnProperty(item)) {
-            let myStorage = {}
-            myStorage[item] = json[item]
-            myStorage['timeStamp'] = Date.parse(new Date())
-            storage[item] = JSON.stringify(myStorage)
+            storage[item] = JSON.stringify(json[item])
         }
     }
 }
 
-/******************************
+/**************
  * 获取localStorage
  * 存在，返回对应值
  * 不存在，返回''
@@ -264,13 +249,12 @@ export const getLocalStorage = function (attr) {
     let storage = window.localStorage
     if (containLocalStorage(attr)) {
         let json = JSON.parse(storage[attr])
-        return json[attr]
+        return json
     } else {
         return ''
     }
 }
-
-/******************************
+/*************
  * 删除localStorage
  *
  */
@@ -280,16 +264,13 @@ export const delLocalStorage = function (attr) {
         storage.removeItem(attr)
     }
 }
-
-/**************************
+/**************
  * 删除全部localStorage
  */
 export const delAllLocalStorage = function (attr) {
     let storage = window.localStorage
     storage.clear()
 }
-
-
 
 /**************************************************************************************************************************
  *                                  uri操作 相关
@@ -360,18 +341,6 @@ export const isJson = function (data) {
     return false
 }
 
-/*********************************
- *不能为空
- *
- * true 空， false 非空
- */
-export const isEmpty = function (value) {
-    if (value === null || value === undefined || value === '') {
-        return true
-    }
-    return false
-}
-
 /************************************
  * 验证密码格式
  *
@@ -395,6 +364,43 @@ export const isPhone = function (value) {
         return true
     }
     return false
+}
+
+/*********************************
+ *为空
+ *
+ * true 空， false 非空
+ */
+export const isEmpty = function (value) {
+    if (value === null || value === undefined || value === '') {
+        return true
+    }
+    return false
+}
+
+/*********************************
+ *字符串格式
+ *
+ * true 是， false 不是
+ */
+export const isString = function (value) {
+    return !!value && value instanceof String
+}
+/*********************************
+ *数组格式
+ *
+ * true 是， false 不是
+ */
+export const isArray = function (value) {
+    return !!value && value instanceof Array
+}
+
+
+/************************************
+ * 是布尔值
+ */
+export const isBollean = function (value) {
+    return value === true || value === false
 }
 
 /**************************************************************************************************************************
