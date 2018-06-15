@@ -420,3 +420,98 @@ export const extend = function (opt, args) {
     }
 }
 
+
+/*****************************************************
+ *                  时间操作方法
+ ******************************************************/
+
+/********************************
+ * 获取 [年,月,日,星期]
+ * params date对象
+ * return ['2017','01','02','5']
+ */
+export const getDateArr = function (date) {
+    let year = date.getFullYear()
+    let month = (date.getMonth() + 1 > 9) ? (date.getMonth() + 1 + '') : ('0' + (date.getMonth() + 1))
+    let day = (date.getDate() > 9) ? (date.getDate() + '') : ('0' + date.getDate())
+    let week = date.getDay()
+    return [year, month, day, week]
+}
+
+/********************************
+ * 获取 天数差
+ * params [startDate,endDate] ，参数为date对象
+ * return false:已超时； 11:天数
+ */
+export const getDayDiff = function (dateArr) {
+    let startTime = new Date(dateArr[0]);
+    let endTime = new Date(dateArr[1]);
+    let diff = endTime.getTime() - startTime.getTime();
+    if (diff < 0) {
+        return false
+    }
+    return diff / (3600 * 24 * 1000);
+}
+
+/********************************
+ * 获取 秒数差
+ * params [startDate,endDate] ，参数为date对象
+ * return false:已超时； 111000:秒数
+ */
+export const getSecondDiff = function (dateArr) {
+    let startTime = dateArr[0]
+    let endTime = dateArr[1]
+    let diff = endTime.getTime() - startTime.getTime()
+    if (diff < 0) {
+        return false
+    }
+    return diff / 1000;
+}
+
+/********************************
+ * 秒数转成  天 时 分 秒
+ * params seconds：秒数
+ * return 11天 2h:33m:56s
+ */
+export const getD_H_M_S_BySeconds = function (seconds) {
+    let secondTime = parseInt(seconds);// 秒
+    let minuteTime = 0 // 分
+    let hourTime = 0 // 小时
+    let dayTime = 0 // 天
+    if (secondTime > 60) {//如果秒数大于60，将秒数转换成整数
+        //获取分钟，除以60取整数，得到整数分钟
+        minuteTime = parseInt(secondTime / 60)
+        //获取秒数，秒数取佘，得到整数秒数
+        secondTime = parseInt(secondTime % 60)
+        //如果分钟大于60，将分钟转换成小时
+        if (minuteTime > 60) {
+            //获取小时，获取分钟除以60，得到整数小时
+            hourTime = parseInt(minuteTime / 60)
+            //获取小时后取佘的分，获取分钟除以60取佘的分
+            minuteTime = parseInt(minuteTime % 60)
+            // 如果小时大于24，将转成天
+            if (hourTime > 24) {
+                //获取小时，获取分钟除以60，得到整数小时
+                dayTime = parseInt(hourTime / 24)
+                hourTime = parseInt(hourTime % 24)
+            }
+        }
+    }
+    secondTime = (secondTime > 9) ? secondTime : ('0' + secondTime)
+    minuteTime = (minuteTime > 9) ? minuteTime : ('0' + minuteTime)
+    hourTime = (hourTime > 9) ? hourTime : ('0' + hourTime)
+    dayTime = (dayTime > 9) ? dayTime : ('0' + dayTime)
+    let result = "" + secondTime + 's'
+
+    if (minuteTime > 0) {
+        result = "" + minuteTime + "m:" + result
+    }
+    if (hourTime > 0) {
+        result = "" + hourTime + "h:" + result
+    }
+    if (dayTime > 0) {
+        result = "" + dayTime + "天 " + result
+    }
+    return result
+}
+
