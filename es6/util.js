@@ -421,6 +421,21 @@ export const extend = function (opt, args) {
 }
 
 
+/********************************
+ * json合并
+ * 参数合并，属性添加并覆盖
+ * arguments ： [obj1,obj2]
+ */
+export const extendList = function () {
+    let obj = {}
+    for(let i = 0; i < arguments.length; i++) {
+        for (let key in arguments[i]) {
+            obj[key] = arguments[i][key]
+        }
+    }
+    return obj
+}
+
 /*****************************************************
  *                  时间操作方法
  ******************************************************/
