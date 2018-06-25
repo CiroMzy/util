@@ -441,16 +441,52 @@ export const extendList = function () {
  ******************************************************/
 
 /********************************
- * 获取 [年,月,日,星期]
+ * 获取 [年,月,日,星期,星期名]
  * params date对象
- * return ['2017','01','02','5']
+ * return ['2017','01','02','5','周五']
  */
 export const getDateArr = function (date) {
     let year = date.getFullYear()
     let month = (date.getMonth() + 1 > 9) ? (date.getMonth() + 1 + '') : ('0' + (date.getMonth() + 1))
     let day = (date.getDate() > 9) ? (date.getDate() + '') : ('0' + date.getDate())
     let week = date.getDay()
-    return [year, month, day, week]
+    return [year, month, day, week, getWeekStr(week)]
+}
+
+/********************************
+ * 获取 周几
+ * params '5'
+ * return 周日
+ */
+export const getWeekStr = function (week) {
+    let str = ''
+    switch (week) {
+        case '0':
+            str = '周日'
+            break;
+        case "1":
+            str = '周一'
+            break;
+        case "2":
+            str = '周二'
+            break;
+        case "3":
+            str = '周三'
+            break;
+        case "4":
+            str = '周四'
+            break;
+        case "5":
+            str = '周五'
+            break;
+        case "6":
+            str = '周六'
+            break;
+        default:
+            str = ' '
+            break
+    }
+    return str
 }
 
 /********************************
