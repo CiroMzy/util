@@ -566,3 +566,107 @@ export const getD_H_M_S_BySeconds = function (seconds) {
     return result
 }
 
+/********************************
+ * 获取月份列表
+ * params date：开始时间对象
+ * return monthList 月份列表
+ */
+export const getMonthList = function (date) {
+    let monthList = []
+    let nowDate = this.formatDateObjToDate(date)
+    let nowYear = Number(nowDate[0])
+    let nowMonth = Number(nowDate[1])
+
+    for (let i = 0; i < 13; i++) {
+        let m = nowMonth + i > 12 ? (nowMonth + i  - 12) : nowMonth + i
+        m = m <  10 ? '0' +m : m
+        let y = nowMonth + i > 12 ? nowYear + 1 : nowYear
+        monthList.push([y + '',m + ''])
+    }
+
+    return monthList
+
+}
+
+/********************************
+ * 获取月份日期列表
+ * params: [年，月]
+ * return: [01,02,03...31]
+ */
+export const getDaysByMonth = function (arr) {
+    let daysArr = []
+    let dateLen = new Date(arr[0],arr[1],0).getDate()
+    for (let i = 1; i < dateLen + 1; i++){
+        let day = i < 10 ? '0'+i : i
+        let dateStr = `${arr[0]}-${arr[1]}-${day}`
+        let obj = {
+            date: dateStr, // 当前日期
+        }
+        daysArr.push(obj)
+    }
+}
+/********************************
+ * 将date转成年月日
+ * params: date对象
+ * return: [年,月,日]
+ */
+export const formatDateObjToDate = function (date) {
+    let year = date.getFullYear()
+    let month = (date.getMonth() + 1).toString().length === 1 ? '0' + (date.getMonth() + 1).toString() : (date.getMonth() + 1)
+    let day = date.getDate().toString().length === 1 ? '0' + date.getDate() : date.getDate()
+    return [year+'', month+'', day + '']
+}
+
+/**
+ * 判断日期是否是包含关系
+ * @param date: 日期对象, arrDate: [开始日期，结束日期]
+ * @returns 1:开始，2：结束，3：包含,
+ */
+export const isContentDate = function (date, arrDate) {
+    let selectedDate = arrDate
+    let now = date
+    let selected = false
+    let startDate = selectedDate[0]
+    let endDate = selectedDate[1]
+    let n = joinDateArrToStr(formatDateObjToDate(now))
+    let s = joinDateArrToStr(formatDateObjToDate(startDate))
+    let e = joinDateArrToStr(formatDateObjToDate(endDate))
+    if (now >= startDate && now <= endDate) {
+        selected = true
+    }
+    return {
+        selected: selected,
+        start: n === s,
+        end: n === e
+    }
+}
+/**
+ * 获取一年之后日期
+ * @param startDateStr: '2018-02-02'
+ * @returns 1:开始，2：结束，3：包含,
+ */
+export const getOneYear = function (startDateStr) {
+    let endDate =new Date(startDateStr)
+    endDate = endDate.setFullYear(endDate.getFullYear()+1)
+    endDate =  new Date(endDate)
+    return endDate
+}
+/**
+ * 将日期数组日期转字符串
+ * @param arr: [年，月，日]
+ * @returns 1: 年-月-日
+ */
+export const joinDateArrToStr = function (arr) {
+    return `${arr[0]}-${arr[1]}-${arr[2]}`
+}
+/**
+ * 获取当前日期为周几
+ * @param date: date对象
+ * @returns week: 周几，isWeekend：是否是周末
+ */
+export const getDateWeek = function (date) {
+    return {
+        week: date.getDay(),
+        isWeekend: date.getDay()===0 || date.getDay()===6
+    }
+}
